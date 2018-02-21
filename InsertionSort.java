@@ -43,10 +43,10 @@ public class InsertionSort {
 		final long startTime = System.nanoTime();
 		
 		//Read in the file;
-		 FileReader file = new FileReader("input_100000.txt");
+		 FileReader file = new FileReader("input_1000.txt");
 		 
 		 //Initialize new array list;
-	        int[] integers = new int [100000];
+	        int[] integers = new int [1000];
 	        
 	       //Initialize to 0;
 	        int i=0;
