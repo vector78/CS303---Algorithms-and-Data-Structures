@@ -1,3 +1,10 @@
+/**********************
+Programmer: Devin Koehl
+Project: CS303 - Insertion Sort
+Date: February 21, 2018
+**************************/
+
+
 import java.util.Scanner;
 import java.io.FileReader;
 import java.io.IOException;
@@ -5,10 +12,11 @@ import java.io.IOException;
 
 public class InsertionSort {
 	
+	//Insertion sort - pg. 18 Cormen Text
 	 static void Insertionsort(int arr[])
 	    {
 		 
-		 	//Set the length;
+		//Set the length;
 	        int length = arr.length;
 	        
 	        //Loop through the array;
@@ -16,7 +24,7 @@ public class InsertionSort {
 	        {
 	        	
 	        	
-	        	//What we are comparing;
+	            //What we are comparing;
 	            int key = arr[i];
 	            
 	            //Go to the next element;
@@ -37,9 +45,10 @@ public class InsertionSort {
 	    }
 	 
 	 
-	
+	//Test Insertion Sort
 	public static void main(String[] args) throws IOException{
 		
+		//Have a feel for how long our algorithm takes to run in ns
 		final long startTime = System.nanoTime();
 		
 		//Read in the file;
@@ -68,12 +77,15 @@ public class InsertionSort {
 	        }
 	        
 
-	        
+	        //Perform Insertion Sort on our input
 	       Insertionsort(integers);
+		
+		//Print our sorted input
 	       for(int item: integers) {
         	   System.out.println(item);
         	}
 	       
+		//Print how long the duration takes
 	       final long duration = System.nanoTime() - startTime;
 	       System.out.println(duration);
 	}
